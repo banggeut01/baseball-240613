@@ -1,7 +1,7 @@
 class Game:
-    def guess(self, quessNumber):
-        if quessNumber is None:
+    def guess(self, guessNumber):
+        if guessNumber is None:
             raise TypeError()
 
-        if len(quessNumber) != 3:
+        if len(guessNumber) != 3:
             raise TypeError()
