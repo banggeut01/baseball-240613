@@ -12,9 +12,12 @@ class Game:
             return GameResult(True, 3, 0)
         else:
             strikes = 0
+            balls = 0
             for i in range(len(self.question)):
                 if self.question.find(guessNumber[i]) == 1:
                     strikes += 1
+                elif self.question.find(guessNumber[i]) > -1:
+                    balls += 1
             return GameResult(False, strikes, 0)
 
     def assert_illegal_value(self, guessNumber):
